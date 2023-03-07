@@ -1,0 +1,23 @@
+﻿@using WeatherAPP1.Models;
+@{
+   // ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Results";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bem-vindo à melhor aplicaçao de Meteorologia!</h1>
+    <br />
+    <div>
+        Seguem as previsoes da cidade de @Model.LocationName;
+    </div>
+    <div>
+       <!-- Exibir resultados da chamada da API -->
+        @foreach(string data in ViewBag.Output)
+        {
+            @data;
+            <br />
+        }
+        @ViewBag.Output; @*// corresponde ao viewbag do homecontroller*@
+
+    </div>
+</div>
